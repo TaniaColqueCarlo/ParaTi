@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuestra historia — Para Ti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Para Ti</div>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="historia.html">Álbum</a>
+        <a href="regalo.html">Regalo</a>
+        <a href="cartas.html">Cartas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Un pequeño álbum</h2>
+        <p class="lead">Fotos de momentos hermosos, en compañia del Bigotin<code>images/</code>.</p>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <img class="thumb" src="imagenes/A.jpg" alt="Foto A" data-full="imagenes/A.jpg">
+            <div class="time-meta">07/05/2025</div>
+            <p>Pienso que fue un buen dia por que ya te oficialisaron en el equipo y fue un muy buen logro.</p>
+          </article>
+
+          <article class="timeline-item">
+            <img class="thumb" src="imagenes/B.jpg" alt="Foto B" data-full="imagenes/B.jpg">
+            <div class="time-meta">27/10/2023</div>
+            <p>Un dia que estuvo jugando futbol en tu casa xdxd.</p>
+          </article>
+
+          <article class="timeline-item">
+            <img class="thumb" src="imagenes/A2.jpg" alt="Foto A2" data-full="imagenes/A2.jpg">
+            <div class="time-meta">05/10/2025</div>
+            <p>Jugaste en la asociacion y ese dia estabas feliz y querias hacer tantas cosas
+                la ultima foto pero si gustas podriamos poner maaas .</p>
+          </article>
+        </div>
+
+        <!-- Lightbox modal -->
+        <div id="lightbox" class="modal" aria-hidden="true">
+          <div class="modal-content modal-image">
+            <button class="modal-close" data-close>&times;</button>
+            <img id="lightboxImg" src="#" alt="Imagen ampliada">
+            <div id="lightboxCaption" class="time-meta"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Hecho con ❤ para ti.</p>
+    </div>
+  </footer>
+</body>
+</html>

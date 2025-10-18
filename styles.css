@@ -1,0 +1,97 @@
+:root{
+  --bg:#00324d; /* cambiado según tu petición */
+  --card:rgba(255,255,255,0.06);
+  --card-opaque: #ffffff; /* modal background más legible */
+  --text-dark: #00324d; /* texto sobre fondo claro */
+  --accent:#ffd6e0; /* color claro para acentos sobre fondo oscuro */
+  --muted:rgba(255,255,255,0.9);
+  --glass: rgba(255,255,255,0.06);
+  --radius:14px;
+  --maxw:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Poppins',system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background: var(--bg);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--maxw);margin:0 auto;padding:2rem}
+
+.site-header{background:transparent;padding:1rem 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--accent);font-size:1.25rem}
+.main-nav a{margin-left:1rem;color:rgba(255,255,255,0.92);text-decoration:none}
+.main-nav a:hover{color:var(--accent)}
+
+.hero{padding:4rem 0 6rem 0;text-align:center}
+.hero-inner{position:relative}
+.hero-inner h1{font-size:2.6rem;margin:0 0 .5rem}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:1.25rem;align-items:center}
+.hero-side{display:flex;flex-direction:column;align-items:center}
+.hero-side-img{width:100%;height:260px;object-fit:cover;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.25)}
+.hero-side-desc{color:var(--muted);margin-top:.6rem;text-align:center}
+.subtitle{color:var(--muted);margin-bottom:1.25rem}
+.btn{background:var(--accent);color:var(--bg);border:0;padding:.65rem 1rem;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.btn.small{padding:.4rem .6rem;font-size:.9rem}
+.hero-cta a{margin:0 .5rem}
+
+.section{padding:2.5rem 0}
+.section-soft{background:linear-gradient(180deg, rgba(255,235,245,0.6), transparent)}
+
+h2{margin-top:0;color:var(--muted)}
+.lead{color:var(--muted)}
+
+.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.timeline-item{background:var(--card);border-radius:var(--radius);padding:1rem;box-shadow:0 6px 18px rgba(0,0,0,0.18);text-align:center}
+.timeline-item img{width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:.5rem}
+.timeline-item .thumb{height:220px}
+.time-meta{font-size:.85rem;color:var(--muted);margin-bottom:.5rem}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.18)}
+
+.site-footer{padding:2rem 0;text-align:center;color:var(--muted)}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);opacity:0;pointer-events:none;transition:opacity .18s ease}
+.modal[aria-hidden="false"]{opacity:1;pointer-events:auto}
+.modal-content{background:var(--card-opaque);color:var(--text-dark);padding:1.25rem;border-radius:12px;max-width:520px;width:90%;position:relative}
+.modal-close{position:absolute;top:8px;right:8px;border:0;background:transparent;font-size:1.25rem;cursor:pointer;color:var(--text-dark)}
+
+/* Game area */
+.game-area{min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem}
+#score{font-weight:600;color:var(--accent)}
+.heart{position:absolute;font-size:28px;cursor:pointer;transform:translate(-50%,-50%);transition:transform .12s ease}
+
+/* Big message animation */
+.big-message{font-size:2rem;color:var(--accent);font-weight:800;text-align:center;margin:0.75rem 0;opacity:0;transform:scale(.6)}
+.big-message.show{opacity:1;animation:bounce 1s cubic-bezier(.2,.8,.2,1)}
+
+@keyframes bounce{
+  0%{transform:scale(.6) translateY(-6px)}
+  40%{transform:scale(1.08) translateY(0)}
+  60%{transform:scale(.96)}
+  100%{transform:scale(1)}
+}
+
+/* floating hearts emitted by the big message */
+.floating-heart{position:absolute;font-size:20px;pointer-events:none;opacity:0.95;transform:translateY(0);transition:transform 1.6s linear, opacity 1.6s linear}
+
+/* Confetti particles */
+.confetti{position:absolute;width:10px;height:14px;border-radius:2px;pointer-events:none;opacity:1;transform:translateY(0);transition:transform 3.2s cubic-bezier(.2,.9,.2,1), opacity 2.8s linear}
+
+/* Lightbox image modal */
+.modal-image{max-width:900px}
+.modal-image img{width:100%;height:auto;border-radius:10px;display:block}
+.modal-image .time-meta{margin-top:.5rem;text-align:center}
+
+
+/* Responsive */
+@media (max-width:640px){
+  .hero-inner h1{font-size:1.8rem}
+  .timeline-item img{height:120px}
+}

@@ -1,0 +1,16 @@
+# Archivos y carpetas comunes a ignorar
+node_modules/
+*.log
+.DS_Store
+.vscode/
+.idea/
+.env
+dist/
+__pycache__/
+Thumbs.db
+
+# ignorar archivos temporales del sistema
+*.tmp
+
+# no ignorar imágenes si quieres subirlas
+# images/

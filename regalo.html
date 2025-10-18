@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sorpresa — Para Ti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Para Ti</div>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="historia.html">Nuestra historia</a>
+        <a href="regalo.html">Regalo</a>
+        <a href="cartas.html">Cartas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-soft">
+      <div class="container">
+        <h2>Regalo interactivo</h2>
+        <p class="lead">Haz clic en "Abrir regalo" para ver la sorpresa.</p>
+        <button id="openGame" class="btn">Abrir regalo</button>
+
+        <div id="gameModal" class="modal" aria-hidden="true">
+          <div class="modal-content">
+            <button class="modal-close" data-close>&times;</button>
+            <h3>¡Sorpresa!</h3>
+            <p>Disfruta este momento especial.</p>
+            <div id="gameArea" class="game-area" style="position:relative;min-height:220px;">
+              <div id="score">Puntos: 0</div>
+              <button id="startGame" class="btn">Empezar juego</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Hecho con ❤ para ti.</p>
+    </div>
+  </footer>
+</body>
+</html>
